@@ -1,0 +1,7 @@
+---
+title: "Recursos"
+toc-title-website: "Sumário"
+lang: pt
+---
+
+Lista de recursos úteis para aprender R.

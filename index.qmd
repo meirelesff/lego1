@@ -1,0 +1,32 @@
+---
+title: "Lego I"
+reference-location: margin
+author: "Rogério Barbosa e Fernando Meireles"
+author-title: "PROFESSORES"
+abstract: "Maurício"
+abstract-title: "MONITOR"
+toc: false
+lang: pt
+---
+
+
+## Sobre
+
+Este é *website* com materias da disciplina de *Lego I*, ministrada pelo Programa de Pós-Graduação de Ciência Política do Instituto de Estudos Sociais e Políticos e Universidade do Estado do Rio de Janeiro (IESP-UERJ). A ementa do curso pode ser encontrada aqui.
+
+
+## Cronograma
+
+:::{.callout-important}
+## Aviso
+Este é um cronograma inicial sujeito a modificações
+:::
+
+Aula |  Data   | Tópico
+-----|-----|-----:
+1 | 17/08 | Nivelamento I
+2 | 24/08 | Nivelamento II
+3 | 31/08 | Nivelamento III
+
+
+

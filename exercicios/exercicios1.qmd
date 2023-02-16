@@ -1,0 +1,118 @@
+---
+title: "Exercícios 2"
+subtitle: "Aula 2"
+reference-location: margin
+lang: pt
+twitter-card: true
+creator: "@meirelesff"
+---
+
+
+# 1) Modelos
+
+Para esse exercício, será necessário carregar alguns dados climáticos de São Bernardo do Campo (SP):
+
+::: {.panel-tabset}
+
+## R
+
+``` {.r}
+link <- "https://raw.githubusercontent.com/jacobwright32/Web_Scraper_AI_Core_Project/bb4865ae568e23ab8fadb6ea58cf117df2164ef3/web%20scraping/Cleaned%20Data/Brazil_Sao%20Bernardo%20Do%20Campo_Cleaned.csv"
+dados <- readr::read_csv(link)
+```
+
+## Python
+
+``` {.python}
+import pandas as pd
+
+link = 'https://raw.githubusercontent.com/jacobwright32/Web_Scraper_AI_Core_Project/bb4865ae568e23ab8fadb6ea58cf117df2164ef3/web%20scraping/Cleaned%20Data/Brazil_Sao%20Bernardo%20Do%20Campo_Cleaned.csv'
+dados = pd.read_csv(link)
+```
+
+:::
+
+
+## a) Gráfico
+
+Analise a relação entre entre cobertura de nuvens (`cloud_coverage`) e temperatura máxima (`maximum_temperature`). Para isso, plote gráficos com a relação bivariada, use coeficiente de correlação ou um modelo linear (OLS). Descreva os resultados que encontrar.
+
+## b) Exploração
+
+Existe alguma outra variável na base com maior correção com a temperatura máxima? Novamente, registre os resultados que encontrar.
+
+## c) Exportação
+
+Crie um código que faça um gráfico da relação bivariada entre todas as variáveis contínuas na base e os salve em disco. Dica:
+
+::: {.panel-tabset}
+
+## R
+
+``` {.r}
+library(tidyverse)
+
+p <- ggplot()
+ggsave(p, file = paste0("grafico.png"))
+```
+
+## Python
+
+``` {.python}
+from matplotlib import pyplot as plt
+plt.savefig('grafico.png')
+```
+:::
+
+
+## d) Modelo
+
+Rode modelos lineares simples (por mínimos quadrados ordinários) para predizer a temperatura máxima diária em São Bernardo do Campo (SP). Use as variáveis que quiser, faça transformações nelas se necessário, e reporte alguns resultados do melhor modelo que encontrar.
+
+## e) Comparação
+
+Salve as predições do seu modelo treinado no exercício anterior e compare com os valores reais de temperatura máxima (vale usar gráficos).
+
+
+# 2) Sorteios
+
+## a) Umidade
+
+Crie uma função (ou um código) para sortear 1000 observações do banco de dados climáticos, calcular a média de umidade (`humidity`).
+
+
+## b) Histograma
+
+Com a função criada anteriormente, calcule 1000 médias de amostras de `humidity` e plote a distribuição como um histograma.
+
+
+## c) Modelos lineares
+
+Modifique a função criada anteriormente para, depois de sortear 1000 observações do banco, rodar um modelo de regressão linear para predizer valores de `humidity` e extrair o `r2` do modelo. Dica:
+
+::: {.panel-tabset}
+
+## R
+
+``` {.r}
+modelo <- lm(rnorm(100) ~ rnorm(100))
+summary(modelo)$r.squared
+```
+
+## Python
+
+``` {.python}
+from matplotlib import pyplot as plt
+plt.savefig('grafico.png')
+```
+:::
+
+
+# 3) Frameworks
+
+Ainda usando a base carregada anteriormente, use um *framework* para estimar um modelo de regressão tendo `humidity` como *target*. Dicas: siga os tutoriais do [mlr3](https://mlr3book.mlr-org.com/), para `R`, ou do [sci-kit learn](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html), para `Python`. Não se preocupe em usar os *frameworks* perfeitamente, o importante é ganhar familiaridade com eles.
+
+
+
+
+
