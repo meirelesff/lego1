@@ -3,7 +3,7 @@ title: "Lego I"
 reference-location: margin
 author: "Rogério Barbosa e Fernando Meireles"
 author-title: "PROFESSORES"
-abstract: "Maurício"
+abstract: "Maurício Marques"
 abstract-title: "MONITOR"
 toc: false
 lang: pt
@@ -25,8 +25,8 @@ Este é um cronograma inicial sujeito a modificações
 Aula |  Data   | Tópico
 -----|-----|-----:
 1 | 17/08 | Nivelamento I
-2 | 24/08 | Nivelamento II
-3 | 31/08 | Nivelamento III
+2 | - | Nivelamento II
+3 | - | Nivelamento III
 
 
 

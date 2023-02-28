@@ -39,7 +39,7 @@
     "href": "index.html#cronograma",
     "title": "Lego I",
     "section": "Cronograma",
-    "text": "Cronograma\n\n\n\n\n\n\nAviso\n\n\n\nEste é um cronograma inicial sujeito a modificações\n\n\n\n\n\nAula\nData\nTópico\n\n\n\n\n1\n17/08\nNivelamento I\n\n\n2\n24/08\nNivelamento II\n\n\n3\n31/08\nNivelamento III"
+    "text": "Cronograma\n\n\n\n\n\n\nAviso\n\n\n\nEste é um cronograma inicial sujeito a modificações\n\n\n\n\n\nAula\nData\nTópico\n\n\n\n\n1\n17/08\nNivelamento I\n\n\n2\n-\nNivelamento II\n\n\n3\n-\nNivelamento III"
   },
   {
     "objectID": "materiais/aula1.html",
@@ -47,6 +47,41 @@
     "title": "Aula 1",
     "section": "",
     "text": "…"
+  },
+  {
+    "objectID": "materiais/nivelamento1.html",
+    "href": "materiais/nivelamento1.html",
+    "title": "Nivelamento I",
+    "section": "",
+    "text": "Em vez de explicar o que é o R, é melhor começar por entender o ele faz. Aqui vão alguns exemplos:\n\nCarregar e manipular bases de dados\nEstimar modelos estatísticos\nCriar gráficos, até mesmo interativos\nCriar websites e dezenas de tipos de documentos\nExtrair dados de redes sociais ou de websites\n\nFormalmente, o R é um ambiente de programação e é por isso que é possível fazer tanto com ele. Adiante, veremos mais detidamente o que tudo isso significa, mas, por hora, o importante a gravar é isso: o R é muito mais do que um software estatístico como o Excel ou o SPSS."
+  },
+  {
+    "objectID": "materiais/nivelamento1.html#r-na-nuvem",
+    "href": "materiais/nivelamento1.html#r-na-nuvem",
+    "title": "Nivelamento I",
+    "section": "R na nuvem",
+    "text": "R na nuvem\nNão é necessário instalar o R para começar a usá-lo. Há uma alternativa mais fácil que nos poupar tempo: ir diretamente para o site rstudio.cloud e criar uma conta, o que nos dará acesso a uma instalação do R (e do RStudio, uma interface mais amigável para o R) diretamente do nosso navegador. Um passo a passo:\n\nEntre no site rstudio.cloud e crie uma conta no plano Free;\nFaça login na sua conta e entre em Posit cloud\nClique em New project e, depois, em New RStudio project\nPronto, se tudo der certo, você estará com o RStudio aberto e com uma instalação do R pronta para ser usada como mostra a Figura 1 a seguir  \n\n\n\n\n\nFigura 1: RStudio Cloud"
+  },
+  {
+    "objectID": "materiais/nivelamento1.html#usando-o-rstudio",
+    "href": "materiais/nivelamento1.html#usando-o-rstudio",
+    "title": "Nivelamento I",
+    "section": "Usando o RStudio",
+    "text": "Usando o RStudio\nA imagem abaixo resume o principal sobre o RStudio. Como dá para ver, cada painel tem uma utilidade, e iremos explorar algumas delas nesta aula.\n\n\n\n\nFigura 2: Identificando o console e o botação para criar scripts\n\n\n\nA primeira coisa que vamos usar é o console – que nada mais é do que uma caixa de texto onde podemos escrever e executar códigos indicada na Figura 2 . Experimente digitar, por exemplo, 2 ali.\n\n2\n\n[1] 2\n\n\nO R reproduzirá o 2 digitado seguido de # e [], geralmente com algum número dentro. No primeiro caso, # indica um comentário: tudo o que vem sucedido de # o R não executará.\n\n# Isto é um comentário\n\n# O 2, abaixo, não é um comentário\n2\n\n[1] 2\n\n\nO R também serve como calculadora: basta usar operadores matemáticos e números. Aqui vão alguns exemplos (tente outros).\n\n2 + 2 # adição\n\n[1] 4\n\n2 - 2 # subtração\n\n[1] 0\n\n2 / 2 # divisão\n\n[1] 1\n\n2 * 2 # multiplicação\n\n[1] 4\n\n\nMais útil do que digitar código diretamente no console é salvá-lo em scripts – pequenos documentos de texto que nos permitem salvar, documentar e reutilizar um mesmo código várias e várias vezes.\nPara criar um script, clique no botão com um símbolo de adição em verde (indicado na Figura 2) e, em seguida, clique na primeira opção, R Script. Você verá um painel novo onde é possível escrever seus códigos. Para salvar o arquivo, clique no ícone de disquete (ou use Ctrl/Command + S), coloque um nome para o arquivo (como meu_script) e o salve. Isso feito, o novo script deverá aparecer no painel de arquivos do RStudio como na Figura 3:\n\n\n\n\nFigura 3: Salvando um script\n\n\n\nPara rodar códigos a partir de um script, basta colocar o cursor na linha onde está o código que você quer executar e acionar Ctrl/Command + Enter."
+  },
+  {
+    "objectID": "materiais/nivelamento1.html#pacotes-e-funções",
+    "href": "materiais/nivelamento1.html#pacotes-e-funções",
+    "title": "Nivelamento I",
+    "section": "Pacotes e funções",
+    "text": "Pacotes e funções\nPara termos mais funcionalidades, como a de fazer gráficos ou a de carregar dados a partir arquivos, é útil instalar alguns pacotes. Estes nada mais são do que coleções de funções que, uma vez instalados e carregados, nos dão mais recursos.\nUm primeiro pacote útil para instalar é o tidyverse, que é um mega-pacote que contém vários outros cujo objetivo é facilitar a análise de dados e que segue uma filosofia comum (os tidy principles). Para instalar um pacote, basta rodar no console:\n\ninstall.packages(\"tidyverse\")\n\nDepois disso, você verá no console uma série de mensagens em vermelho ou outra cor, o que é normal. Assim que isso cessar, é possível carregar as funções do tidyverse usando a função library (adicione a seguinte linha no seu script:\n\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.4.1     ✔ purrr   1.0.1\n✔ tibble  3.1.8     ✔ dplyr   1.1.0\n✔ tidyr   1.3.0     ✔ stringr 1.5.0\n✔ readr   2.1.4     ✔ forcats 1.0.0\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\n\nUma série de mensagens novamente vai aparecer indicando quais pacotes que compõem o tidyverse foram carregados."
+  },
+  {
+    "objectID": "materiais/nivelamento1.html#explorando-dados",
+    "href": "materiais/nivelamento1.html#explorando-dados",
+    "title": "Nivelamento I",
+    "section": "Explorando dados",
+    "text": "Explorando dados"
   },
   {
     "objectID": "recursos.html",

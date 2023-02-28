@@ -1,8 +1,110 @@
 ---
 title: "Nivelamento I"
-subtitle: "Tema do nivelamento" 
+subtitle: "Conhecendo o R" 
 reference-location: margin
 lang: pt
 ---
 
-## Conteúdo
+## O que é o `R`?
+
+Em vez de explicar o que é o `R`, é melhor começar por entender o ele faz. Aqui vão alguns exemplos:
+
+- Carregar e manipular bases de dados
+- Estimar modelos estatísticos
+- Criar gráficos, até mesmo interativos
+- Criar *websites* e dezenas de tipos de documentos
+- Extrair dados de redes sociais ou de *websites*
+
+Formalmente, o `R` é um ambiente de programação e é por isso que é possível fazer tanto com ele. Adiante, veremos mais detidamente o que tudo isso significa, mas, por hora, o importante a gravar é isso: o `R` é muito mais do que um *software* estatístico como o Excel ou o SPSS.
+
+## `R` na nuvem
+
+Não é necessário instalar o `R` para começar a usá-lo. Há uma alternativa mais fácil que nos poupar tempo: ir diretamente para o site [rstudio.cloud](rstudio.cloud) e criar uma conta, o que nos dará acesso a uma instalação do `R` (e do `RStudio`, uma interface mais amigável para o `R`) diretamente do nosso navegador. Um passo a passo:
+
+1) Entre no site [rstudio.cloud](rstudio.cloud) e crie uma conta no plano *Free*;
+2) Faça *login* na sua conta e entre em [Posit cloud](https://rstudio.cloud/projects/)
+3) Clique em `New project` e, depois, em `New RStudio project`
+4) Pronto, se tudo der certo, você estará com o `RStudio` aberto e com uma instalação do `R` pronta para ser usada como mostra a @fig-cloud a seguir
+<br>
+<br>
+
+
+
+:::{.column-page}
+![RStudio Cloud](imgs/posit.png){#fig-cloud}
+:::
+
+## Usando o `RStudio`
+
+A imagem abaixo resume o principal sobre o `RStudio`. Como dá para ver, cada painel tem uma utilidade, e iremos explorar algumas delas nesta aula.
+
+:::{.column-body-outset}
+![Identificando o console e o botação para criar scripts](imgs/posit_comments.png){#fig-cloud-comments}
+:::
+
+
+
+A primeira coisa que vamos usar é o console -- que nada mais é do que uma caixa de texto onde podemos escrever e executar códigos indicada na @fig-cloud-comments . Experimente digitar, por exemplo, `2` ali.
+
+```{r}
+2
+```
+
+O `R` reproduzirá o 2 digitado seguido de `#` e `[]`, geralmente com algum número dentro. No primeiro caso, `#` indica um comentário: tudo o que vem sucedido de `#` o R não executará.
+
+
+```{r}
+# Isto é um comentário
+
+# O 2, abaixo, não é um comentário
+2
+```
+
+
+O `R` também serve como calculadora: basta usar operadores matemáticos e números. Aqui vão alguns exemplos (tente outros).
+
+
+```{r}
+2 + 2 # adição
+2 - 2 # subtração
+2 / 2 # divisão
+2 * 2 # multiplicação
+```
+
+Mais útil do que digitar código diretamente no *console* é salvá-lo em *scripts* -- pequenos documentos de texto que nos permitem salvar, documentar e reutilizar um mesmo código várias e várias vezes.
+
+Para criar um *script*, clique no botão com um símbolo de adição em verde (indicado na @fig-cloud-comments) e, em seguida, clique na primeira opção, `R Script`. Você verá um painel novo onde é possível escrever seus códigos. Para salvar o arquivo, clique no ícone de disquete (ou use `Ctrl/Command + S`), coloque um nome para o arquivo (como `meu_script`) e o salve. Isso feito, o novo *script* deverá aparecer no painel de arquivos do `RStudio` como na @fig-script:
+
+:::{.column-body-outset}
+![Salvando um script](imgs/script.png){#fig-script}
+:::
+
+Para rodar códigos a partir de um *script*, basta colocar o cursor na linha onde está o código que você quer executar e acionar `Ctrl/Command + Enter`.
+
+
+## Pacotes e funções
+
+Para termos mais funcionalidades, como a de fazer gráficos ou a de carregar dados a partir arquivos, é útil instalar alguns pacotes. Estes nada mais são do que coleções de funções que, uma vez instalados e carregados, nos dão mais recursos.
+
+Um primeiro pacote útil para instalar é o `tidyverse`, que é um mega-pacote que contém vários outros cujo objetivo é facilitar a análise de dados e que segue uma filosofia comum (os [tidy principles](https://tidyverse.tidyverse.org/articles/manifesto.html)). Para instalar um pacote, basta rodar no *console*:
+
+```{r, eval=FALSE}
+install.packages("tidyverse")
+```
+
+Depois disso, você verá no *console* uma série de mensagens em vermelho ou outra cor, o que é normal. Assim que isso cessar, é possível carregar as funções do `tidyverse` usando a função `library` (adicione a seguinte linha no seu *script*:
+
+```{r}
+library(tidyverse)
+```
+
+Uma série de mensagens novamente vai aparecer indicando quais pacotes que compõem o `tidyverse` foram carregados.
+
+
+## Explorando dados
+
+
+
+
+
+
